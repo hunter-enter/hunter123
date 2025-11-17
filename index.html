@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitPulse - Fitness & Diet Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+	<section id="home" class="home">	
+            <div class="banner-overlay">
+			<br><br>
+                <h1>Welcome to FitPulse</h1>
+                <p>Your Ultimate Fitness & Diet Companion</p>
+                <p>Transform your body and mind with personalized workout plans, expert nutrition advice, and a supportive health community.</p>
+            </div>
+    </section>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">FitPulse</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#workout">Workout Plans</a></li>
+                <li><a href="#community">Health Community</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+	<section id="video-banner" class="video-section">
+        <div class="container">
+            <h2>Start Your Transformation Today</h2>
+            <div class="video-wrapper">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/4Bsc2uI_LsM?list=RD4Bsc2uI_LsM" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="workout" class="workout">
+        <div class="container">
+            <h2>Workout Plans</h2>
+            <div class="card-grid">
+                
+                <div class="plan-card">
+                    <img src="images/strength.png" alt="Strength Training">
+                    <h3>Strength Training</h3>
+                    <ul>
+                        <li>Build muscle mass</li>
+                        <li>Increase bone density</li>
+                        <li>Boost metabolism</li>
+                        <li>Improve posture</li>
+                    </ul>
+                </div>
+
+                <div class="plan-card">
+                    <img src="images/cardio.png" alt="Cardio">
+                    <h3>Cardio Exercises</h3>
+                    <ul>
+                        <li>Improve heart health</li>
+                        <li>Burn calories fast</li>
+                        <li>Reduce stress</li>
+                        <li>Increase stamina</li>
+                    </ul>
+                </div>
+
+                <div class="plan-card">
+                    <img src="images/yoga.png" alt="Yoga">
+                    <h3>Yoga & Flexibility</h3>
+                    <ul>
+                        <li>Enhance flexibility</li>
+                        <li>Reduce stress</li>
+                        <li>Improve balance</li>
+                        <li>Better breathing</li>
+                    </ul>
+                </div>
+
+                <div class="plan-card">
+                    <img src="images/hiit.png" alt="HIIT">
+                    <h3>HIIT Workouts</h3>
+                    <ul>
+                        <li>Maximum fat burn</li>
+                        <li>Time efficient</li>
+                        <li>Boost endurance</li>
+                        <li>Afterburn effect</li>
+                    </ul>
+                </div>
+
+                <div class="plan-card">
+                    <img src="images/core.png" alt="Core Training">
+                    <h3>Core Training</h3>
+                    <ul>
+                        <li>Stronger midsection</li>
+                        <li>Better stability</li>
+                        <li>Reduced back pain</li>
+                        <li>Improved athleticism</li>
+                    </ul>
+                </div>
+
+                <div class="plan-card">
+                    <img src="images/pilates.png" alt="Pilates">
+                    <h3>Pilates</h3>
+                    <ul>
+                        <li>Longer, leaner muscles</li>
+                        <li>Improved posture</li>
+                        <li>Mind-body connection</li>
+                        <li>Low impact</li>
+                    </ul>
+                </div>
+
+                <div class="plan-card">
+                    <img src="images/weightloss.png" alt="Weight Loss">
+                    <h3>Weight Loss Program</h3>
+                    <ul>
+                        <li>Sustainable fat loss</li>
+                        <li>Custom meal plans</li>
+                        <li>Progress tracking</li>
+                        <li>Expert guidance</li>
+                    </ul>
+                </div>
+
+                <div class="plan-card">
+                    <img src="images/nutrition.png" alt="Nutrition">
+                    <h3>Nutrition Guidance</h3>
+                    <ul>
+                        <li>Personalized meal plans</li>
+                        <li>Macro tracking</li>
+                        <li>Healthy recipes</li>
+                        <li>Supplements advice</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <section id="community" class="community-section">
+        <div class="container">
+            <h2>Join Our Health Community</h2>
+            <p>Sign up to get personalized fitness tips, access exclusive content, and connect with motivated individuals.</p>
+            
+            <form id="registrationForm" class="reg-form">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone">
+                </div>
+
+                <div class="form-group">
+                    <label>Gender *</label>
+                    <input type="radio" id="male" name="gender" value="male" required> Male
+                    <input type="radio" id="female" name="gender" value="female"> Female
+                </div>
+
+                <div class="form-group">
+                    <label for="goal">Fitness Goal *</label>
+                    <select id="goal" required>
+                        <option value="">Choose Goal</option>
+                        <option value="weightLoss">Weight Loss</option>
+                        <option value="muscleGain">Muscle Gain</option>
+                        <option value="stayHealthy">Stay Healthy</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Interests:</label><br>
+                    <input type="checkbox" id="interestCardio" name="interest"> <label for="interestCardio" class="inline-label">Cardio</label>
+                    <input type="checkbox" id="interestYoga" name="interest"> <label for="interestYoga" class="inline-label">Yoga</label>
+                    <input type="checkbox" id="interestNutrition" name="interest"> <label for="interestNutrition" class="inline-label">Nutrition</label>
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="submit">Join Now</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>We'd love to hear from you! Whether you have questions about our programs or need fitness advice.</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+60123456789">+60 12-345 6789</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@fitpulse.com">info@fitpulse.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>POLITEKNIK BALIK PULAU</p>
+                    </div>
+                    <div class="current-time">
+                        <p><strong>Current Date & Time:</strong></p>
+                        <p id="datetime"></p>
+                    </div>
+                </div>
+
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5617.899233285996!2d100.21727087261402!3d5.347361470767418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304aeafdf3434a0d%3A0x6b7411546a715459!2sPoliteknik%20Balik%20Pulau!5e0!3m2!1sen!2smy!4v1763389792500!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Copyright © FitPulse. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
