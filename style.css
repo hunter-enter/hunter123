@@ -28,9 +28,21 @@ section:nth-child(even) {
 
 h2 {
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     color: #1C1C1C;
+    position: relative;
 }
+
+h2::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background: #FF5722;
+    display: block;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
 
 .navbar {
     position: fixed;
@@ -91,6 +103,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .home-section h1 {
@@ -127,64 +140,95 @@ h2 {
     height: 100%;
     border: 0;
 }
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
+.why-choose-table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    border-collapse: collapse;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-.plan-card {
-    background-color: #FFFFFF;
-    padding: 30px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    height: 100%; 
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+.why-choose-table td {
+    border: 2px solid #000;
+    padding: 25px 30px;
+    vertical-align: middle;
+    width: 50%;
 }
 
-.plan-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
-
-.plan-card img {
-    width: 70px; 
-    height: 70px;
+.why-choose-table td img {
+    width: 60px;
+    height: 60px;
+    display: block;
     margin-bottom: 15px;
 }
 
-.plan-card h3 {
-    color: #FF5722;
-    font-size: 20px;
-    margin-bottom: 15px;
+.why-choose-table td {
+    text-align: center;
 }
 
-.plan-card ul {
-    list-style-type: none;
-    padding: 0;
+.why-choose-table td img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mountain-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.workout-bullets {
     text-align: left;
-    margin-top: 10px;
+    max-width: 900px;
+    margin: 40px auto;
+    font-size: 18px;
+    line-height: 2.2;
+    padding-left: 20px;
 }
 
-.plan-card ul li {
-    font-size: 14px;
-    color: #888888;
-    position: relative;
-    padding-left: 15px;
+.workout-bullets li {
+    margin-bottom: 20px;
 }
 
-.plan-card ul li::before {
-    content: "•";
-    color: #FF5722;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+.ready-text {
+    margin-top: 50px;
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: center;
+}
+@media (max-width: 992px) {
+    .workout-table {
+        border-spacing: 15px;
+    }
+    .workout-table td {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .workout-table {
+        display: block;
+    }
+    .workout-table tr {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .workout-table td {
+        flex: 1 1 calc(50% - 20px);
+        min-width: 280px;
+    }
+}
+
+@media (max-width: 576px) {
+    .workout-table td {
+        flex: 1 1 100%;
+    }
 }
 
 .community-section p {
@@ -203,123 +247,32 @@ h2 {
     text-align: left;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
-
-.reg-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #1C1C1C;
-}
-
+.form-group { margin-bottom: 20px; }
+.reg-form label { display: block; margin-bottom: 8px; font-weight: bold; color: #1C1C1C; }
 .reg-form input[type="text"],
 .reg-form input[type="email"],
 .reg-form input[type="tel"],
 .reg-form select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #CCCCCC; 
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
+    width: 100%; padding: 12px; border: 1px solid #CCC; border-radius: 5px; font-size: 16px;
 }
-
-.reg-form input[type="radio"],
-.reg-form input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-.form-buttons {
-    text-align: center;
-    margin-top: 30px;
-}
-
 .form-buttons button {
-    padding: 12px 25px;
-    margin: 0 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    color: white; 
+    padding: 12px 25px; margin: 0 10px; border: none; border-radius: 5px; cursor: pointer; color: white;
 }
-
-.form-buttons button[type="submit"] {
-    background-color: #FF5722;
-}
-
-.form-buttons button[type="submit"]:hover {
-    background-color: #E64A19;
-}
-
-.form-buttons button[type="reset"] {
-    background-color: #888888;
-}
-
-.form-buttons button[type="reset"]:hover {
-    background-color: #666666;
-}
+.form-buttons button[type="submit"] { background-color: #FF5722; }
+.form-buttons button[type="submit"]:hover { background-color: #E64A19; }
+.form-buttons button[type="reset"] { background-color: #888; }
+.form-buttons button[type="reset"]:hover { background-color: #666; }
 
 .contact-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: space-between;
-    text-align: left;
+    display: flex; flex-wrap: wrap; gap: 50px; justify-content: space-between; text-align: left;
 }
-
-.contact-info {
-    flex: 1;
-    min-width: 300px;
-}
-
-.contact-info h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #1C1C1C;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: 18px;
-}
-
-.contact-item i {
-    font-size: 24px;
-    color: #FF5722;
-    margin-right: 15px;
-    width: 30px;
-}
-
-.contact-item a {
-    color: #FF5722;
-    text-decoration: none;
-}
-
-.current-time {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #FFF0E6;
-    border-radius: 10px;
-    border-left: 5px solid #FF5722;
-}
-
-.map-container {
-    flex: 2;
-    min-width: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.map-container iframe {
-    display: block;
-}
+.contact-info { flex: 1; min-width: 300px; }
+.contact-info h3 { font-size: 28px; margin-bottom: 20px; }
+.contact-item { display: flex; align-items: center; margin-bottom: 20px; font-size: 18px; }
+.contact-item i { font-size: 24px; color: #FF5722; margin-right: 15px; width: 30px; }
+.contact-item a { color: #FF5722; text-decoration: none; }
+.current-time { margin-top: 30px; padding: 20px; background: #FFF0E6; border-radius: 10px; border-left: 5px solid #FF5722; }
+.map-container { flex: 2; min-width: 300px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
 
 .footer {
     background-color: #1C1C1C;
@@ -327,4 +280,30 @@ h2 {
     text-align: center;
     padding: 20px 0;
     font-size: 14px;
+}
+.why-choose, .workout-categories {
+    text-align: left;
+    max-width: 800px;
+    margin: 30px auto;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.why-choose li, .workout-categories li {
+    position: relative;
+    padding-left: 30px;
+}
+
+.why-choose li::before, .workout-categories li::before {
+    content: "✓";
+    color: #FF5722;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.inline-label {
+    display: inline;
+    margin-right: 20px;
+    font-weight: normal;
 }
